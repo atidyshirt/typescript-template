@@ -1,0 +1,25 @@
+{
+    "useTabs": false,
+    "printWidth": 95,
+    "tabWidth": 4,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "prettier.eslintIntegration": true,
+    "prettier.tabWidth": 4,
+    "jsxBracketSameLine": false,
+    "semi": true,
+    "overrides": [
+        {
+            "files": "*.ts",
+            "options": {
+                "parser": "typescript"
+            }
+        },
+        {
+            "files": "*.js",
+            "options": {
+                "parser": "babel"
+            }
+        }
+    ]
+}

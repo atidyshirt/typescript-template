@@ -1,0 +1,63 @@
+{
+    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint", "ban", "unused-imports"],
+    "rules": {
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-empty-function": [
+            "error",
+            {
+                "allow": ["methods", "asyncMethods", "arrowFunctions"]
+            }
+        ],
+        "ban/ban": [
+            2,
+            {
+                "name": ["describe", "only"],
+                "message": "Only focused tests will run"
+            },
+            {
+                "name": "fdescribe",
+                "message": "Only focused tests will run"
+            },
+            {
+                "name": ["it", "only"],
+                "message": "Only focused tests will run"
+            },
+            {
+                "name": "fit",
+                "message": "Only focused tests will run"
+            },
+            {
+                "name": ["test", "only"],
+                "message": "Only focused tests will run"
+            },
+            {
+                "name": "ftest",
+                "message": "Only focused tests will run"
+            }
+        ],
+        "no-restricted-syntax": [
+            "error",
+            {
+                "selector": "TSEnumDeclaration[const=true]",
+                "message": "Use enums instead of const enums"
+            }
+        ],
+        "@typescript-eslint/no-unused-vars": "off",
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+            "warn",
+            {
+                "vars": "all",
+                "varsIgnorePattern": "^_",
+                "args": "after-used",
+                "argsIgnorePattern": "^_"
+            }
+        ]
+    }
+}

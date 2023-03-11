@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "rootDir": "./src",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "outDir": "./build",
+        "lib": ["ESNext", "DOM"],
+        "strict": true
+    }
+}
