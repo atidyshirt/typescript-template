@@ -1,0 +1,10 @@
+{
+    "lspconfig": {
+        "tsserver": {
+            "javascript.autoClosingTags": true,
+            "javascript.format.semicolons": "insert",
+            "typescript.suggest.autoImports": true,
+            "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true
+        }
+    }
+}
